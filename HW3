@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jul 14 10:02:57 2020
+
+@author: LOVESS
+"""
+'''
+作業三：
+寫一個程式，開啟 GeoGebra Classic 網站，畫出一棵樹。
+'''
+import pyautogui
+pyautogui.pause = 1
+pyautogui.hotkey('win', 'r')
+pyautogui.press('shift')
+pyautogui.typewrite('chrome',0.1) #0.1s delay
+pyautogui.press('enter')
+
+#pyautogui.press('shift',1)
+pyautogui.typewrite('https://www.geogebra.org/classic',0.1)
+pyautogui.press('enter')
+pyautogui.hotkey('win','up')
+
+#select a tool
+pyautogui.moveTo(253,123,3)
+pyautogui.click(253,123)
+pyautogui.click(284,357)
+
+#draw a tree
+pyautogui.dragTo(730,330)
+pyautogui.dragTo(680,277,2)
+pyautogui.dragTo(749,234,2)
+pyautogui.dragTo(837,233,2)
+pyautogui.dragTo(878,294,2)
+pyautogui.dragTo(812,331,2)
+
+#select a tool
+pyautogui.click(115,121)
+pyautogui.click(144,230)
+
+#draw trunck
+pyautogui.click(730,301)
+pyautogui.click(730,450,1,2)
+pyautogui.click(812,301,1,2)
+pyautogui.click(812,450,1,2)
