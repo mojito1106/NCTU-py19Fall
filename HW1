@@ -1,3 +1,9 @@
+'''
+作業一：
+寫一個程式，完成下列指令：
+開啟瀏覽器。
+開啟交大首頁：https://www.nctu.edu.tw/
+'''
 import pyautogui
 pyautogui.pause = 1
 pyautogui.hotkey('win', 'r')
