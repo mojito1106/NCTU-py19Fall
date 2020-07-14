@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jul 14 08:29:33 2020
+
+@author: LOVESS
+"""
+'''
+作業二：
+寫一個程式，開啟 GeoGebra Classic 網站，用「手寫筆」功能畫出一個三角形。
+'''
+import pyautogui
+pyautogui.pause = 1
+pyautogui.hotkey('win', 'r')
+pyautogui.press('shift')
+pyautogui.typewrite('chrome',0.1) #0.1s delay
+pyautogui.press('enter')
+pyautogui.hotkey('win','up')
+
+pyautogui.press('shift',1)
+pyautogui.pause = 1
+pyautogui.typewrite('https://www.geogebra.org/classic',0.1)
+pyautogui.press('enter')
+
+
+#select a tool(hand-writing pen)
+pyautogui.moveTo(27,121,5) #waiting for web server
+pyautogui.click(27,121,5)
+pyautogui.click(67,273,5)
+
+#draw a triangle
+'''相對位置
+pyautogui.click(875,240)
+pyautogui.dragRel(50,100,3)
+pyautogui.dragRel(-100,0,3)
+pyautogui.dragRel(50,-100,3)'''
+
+pyautogui.click(875,240)
+pyautogui.dragTo(667,442,3)
+pyautogui.dragTo(1077,439,3)
+pyautogui.dragTo(875,240,3)
