@@ -1,0 +1,17 @@
+'''
+作業一：
+寫一個程式，完成下列指令：
+開啟瀏覽器。
+開啟交大首頁：https://www.nctu.edu.tw/
+'''
+
+
+import pyautogui
+pyautogui.pause = 1
+pyautogui.hotkey('win', 'r')
+pyautogui.press('shift')
+pyautogui.typewrite('chrome',0.1) #0.1s delay
+pyautogui.press('enter')
+pyautogui.typewrite('https://www.nctu.edu.tw/',0.1)
+pyautogui.press('enter')
+pyautogui.click(617,378)
